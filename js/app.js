@@ -10,6 +10,9 @@ const mainForm = document.querySelector(".main-form")
 let counter = 0
 let currValue = 0
 
+
+
+
 customInput.addEventListener("input", function(){
     counter = customInput.value
 })
@@ -30,7 +33,6 @@ btns.forEach(function (btn, index){
         })
     })
 numberInput.addEventListener ("input", function(){
-
     let numberValue = parseFloat(numberInput.value)
         let billValue = parseFloat(billInput.value)
         currValue = (counter * billValue * numberValue)/100
@@ -40,12 +42,11 @@ numberInput.addEventListener ("input", function(){
 })
 
 
-
-
 resetBtn.addEventListener("click", function(){
-    billValue = parseFloat(0)
+    billInput.value = ''
     counter = 0
-    numberValue = parseFloat(0)
+    numberInput.value = ''
+    customInput.value = ''
     tipAmount.textContent = "$"
     totalAmount.textContent = "$"
 
