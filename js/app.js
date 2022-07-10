@@ -3,74 +3,54 @@ let numberInput = document.querySelector(".number-input")
 let customInput = document.querySelector(".custom-input")
 let totalAmount = document.querySelector(".total-amount")
 let tipAmount = document.querySelector(".tip-amount")
-let five = document.querySelector(".five")
-let ten = document.querySelector(".ten")
-let fifteen = document.querySelector(".fifteen")
-let twentyFive = document.querySelector(".twenty-five")
-let fifty = document.querySelector(".fifty")
+const btns = document.querySelectorAll(".btn")
 let resetBtn = document.querySelector(".reset-btn")
+const mainForm = document.querySelector(".main-form")
 
+let counter = 0
+let currValue = 0
 
-window.addEventListener("DOMContentLoaded", function(){
+customInput.addEventListener("input", function(){
+    counter = customInput.value
+})
 
-    customInput.addEventListener("change", function () {
-    let customInputValue = parseFloat(customInput.value)
-    if (customInputValue <= 100){
-        totalAmount.textContent += generateNumber + billContent
-    tipAmount.textContent += generateNumber
-    }
+btns.forEach(function (btn, index){
+        btn.addEventListener("click", function(){
+        if (index <= 2){
+            counter = 5 * index + 5
+        
+        }
+        else if (index === 3){
+            counter = 5 * index + 10
+        }
+        else{
+            counter = 10 * index + 10
+        }
+        
+        })
     })
+numberInput.addEventListener ("input", function(){
+
+    let numberValue = parseFloat(numberInput.value)
+        let billValue = parseFloat(billInput.value)
+        currValue = (counter * billValue * numberValue)/100
+    tipAmount.innerHTML = `<h1>$${currValue}</h1>`
+    let grandTotal = currValue + billValue
+    totalAmount.innerHTML = `<h1>$${grandTotal}</h1>`
+})
 
 
-    five.addEventListener("click", function(){
-    let numberValue = parseFloat(numberInput.value)
-    let billContent = parseFloat(billInput.value)
-    let generateNumber = (5 * billContent * numberValue) / 100;
-    
-    totalAmount.textContent += generateNumber + billContent
-    tipAmount.textContent += generateNumber
-    
-})
-ten.addEventListener("click", function(){
-    let numberValue = parseFloat(numberInput.value)
-    let billContent = parseFloat(billInput.value)
-    let generateNumber = (10 * billContent * numberValue) / 100;
-    totalAmount.textContent += generateNumber + parseFloat(billContent)
-    tipAmount.textContent += generateNumber
-    
-})
-fifteen.addEventListener("click", function(){
-    let numberValue = parseFloat(numberInput.value)
-    let billContent = parseFloat(billInput.value)
-    let generateNumber = (15 * billContent * numberValue) / 100;
-    totalAmount.textContent += generateNumber + parseFloat(billContent)
-    tipAmount.textContent += generateNumber
-    
-})
-twentyFive.addEventListener("click", function(){
-    let numberValue = parseFloat(numberInput.value)
-    let billContent = parseFloat(billInput.value)
-    let generateNumber = (25 * billContent * numberValue) / 100;
-    totalAmount.textContent += generateNumber + parseFloat(billContent)
-    tipAmount.textContent += generateNumber
-    
-})
-fifty.addEventListener("click", function(){
-    let numberValue = parseFloat(numberInput.value)
-    let billContent = parseFloat(billInput.value)
-    let generateNumber = (50 * billContent * numberValue) / 100;
-    totalAmount.textContent += generateNumber + parseFloat(billContent)
-    tipAmount.textContent += generateNumber
-    
-})
+
 
 resetBtn.addEventListener("click", function(){
-    billContent = ''
-    numberValue = ''
-    generateNumber = ''
-    console.log("yesss")
+    billValue = parseFloat(0)
+    counter = 0
+    numberValue = parseFloat(0)
+    tipAmount.textContent = "$"
+    totalAmount.textContent = "$"
+
 })
-})
+
     
 
 

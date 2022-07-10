@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*/*.html"],
+  content: ["./*.html"],
   theme: {
     screens: {
       sm: "480px",
@@ -22,8 +22,8 @@ module.exports = {
         bigKekere: "8px"
       },
       backgroundImage: {
-        dolls: "url(./img/icon-dollar.svg)",
-        person: "url(./img/icon-person.svg)"
+        dolls: "url(/img/icon-dollar.svg)",
+        person: "url(/img/icon-person.svg)"
       }
     },
   },

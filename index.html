@@ -8,39 +8,48 @@
     <title>Tip Calculator</title>
 </head>
 <body class="bg-sky-200">
-    <div class="container mx-auto py-20 ">
+    <div class="container mx-auto py-10 ">
 
-            <img src="./img/logo.svg" class="text-center mx-auto py-20 " alt="">
+            <img src="./img/logo.svg" class="text-center mx-auto pb-10 " alt="">
 
         <div class="bg-white p-10 mx-7 rounded-xl flex justify-center items-center flex-col md:flex-row md:space-x-3 md:mx-24">
             <div class="space-y-3 mb-6 md:w-1/2">
-                <div class="space-y-2">
-                    <label for="Bill" class="font-bold text-darkGrayishCyan">Bill</label>
-                    <input type="number" class="text-veryDarkCyan block bill-input w-full bg-dolls bg-left bg-no-repeat  rounded-md font-bold text-right h-8 bg-veryLightGrayishCyan focus:bg-none">
-                </div>
-                <div class="space-y-2">
-                    <label for="Bill" class="font-bold block text-darkGrayishCyan">Select Tip %</label>
-                        <button class="py-1 five px-5 bg-veryDarkCyan inline-block text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4 ">
+                <!-- <form class="main-form"> -->
+                    <div class="space-y-2">
+                        <label for="Bill" class="font-bold text-darkGrayishCyan">Bill</label>
+                        <input type="number"
+                            class="text-veryDarkCyan block bill-input w-full bg-dolls bg-left bg-no-repeat rounded-md font-bold text-right h-8 bg-veryLightGrayishCyan">
+                    </div>
+                    <div class="space-y-2 mt-5">
+                        <label for="Bill" class="font-bold block text-darkGrayishCyan">Select Tip %</label>
+                        <button
+                            class="py-1 five px-5 bg-veryDarkCyan btn text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4 ">
                             5%
                         </button>
-                        <button class="py-1 ten px-5 bg-veryDarkCyan inline-block text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
+                        <button
+                            class="py-1 ten px-5 bg-veryDarkCyan btn text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
                             10%
                         </button>
-                        <button class="py-1 fifteen px-5 bg-veryDarkCyan text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
+                        <button class="py-1 fifteen px-5 bg-veryDarkCyan btn text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
                             15%
                         </button>
-                        <button class="py-1 twenty-five px-5 bg-veryDarkCyan text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
+                        <button
+                            class="py-1 twenty-five px-5 bg-veryDarkCyan btn text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
                             25%
                         </button>
-                        <button class="py-1 fifty px-5 bg-veryDarkCyan text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
+                        <button class="py-1 fifty px-5 bg-veryDarkCyan btn text-white font-bold rounded-md w-1/3 focus:bg-teal-400 md:w-1/4">
                             50%
                         </button>
-                        <input type="number" class="rounded-md custom-input w-1/3 text-veryDarkCyan md:w-1/4 font-bold text-center h-8 bg-veryLightGrayishCyan" placeholder="Custom">
-                </div>
-                <div class="space-y-2">
-                    <label for="Number" class="font-bold text-darkGrayishCyan">Number</label>
-                    <input type="number" class="block bg-person number-input bg-no-repeat bg-left w-full rounded-md font-bold h-8 text-right focus:bg-none bg-veryLightGrayishCyan">
-                </div>
+                        <input type="number"
+                            class="rounded-md custom-input w-1/3 text-veryDarkCyan md:w-1/4 font-bold text-center h-8 bg-veryLightGrayishCyan"
+                            placeholder="Custom">
+                    </div>
+                    <div class="space-y-2 mt-5">
+                        <label for="" class="font-bold text-darkGrayishCyan">Number</label>
+                        <input type="number"
+                            class="block bg-person number-input bg-no-repeat bg-left w-full rounded-md font-bold h-8 text-right focus:bg-none bg-veryLightGrayishCyan">
+                    </div>
+                <!-- </form> -->
             </div>
 
             <div class="bg-veryDarkCyan w-full h-44 space-y-6 flex flex-col justify-center  rounded-lg px-6 md:w-1/2 md:h-52">
