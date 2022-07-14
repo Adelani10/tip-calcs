@@ -19,6 +19,7 @@ customInput.addEventListener("input", function(){
 
 btns.forEach(function (btn, index){
         btn.addEventListener("click", function(){
+        
         if (index <= 2){
             counter = 5 * index + 5
         
@@ -49,7 +50,6 @@ resetBtn.addEventListener("click", function(){
     customInput.value = ''
     tipAmount.textContent = "$"
     totalAmount.textContent = "$"
-
 })
 
     

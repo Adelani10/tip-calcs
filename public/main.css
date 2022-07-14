@@ -798,9 +798,19 @@ video {
   color: rgb(45 212 191 / var(--tw-text-opacity));
 }
 
+.show{
+  background-color: whitesmoke;
+  color: darkgreen;
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
+}
+
+.focus\:bg-teal-400:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 212 191 / var(--tw-bg-opacity));
 }
 
 .focus\:bg-none:focus {
@@ -840,4 +850,3 @@ video {
     margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
   }
 }
-
