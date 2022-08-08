@@ -713,6 +713,10 @@ video {
   background-image: url(/img/icon-person.svg);
 }
 
+.bg-center {
+  background-position: center;
+}
+
 .bg-left {
   background-position: left;
 }
@@ -808,18 +812,8 @@ video {
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
 }
 
-.focus\:bg-teal-400:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(45 212 191 / var(--tw-bg-opacity));
-}
-
 .focus\:bg-none:focus {
   background-image: none;
-}
-
-.active\:bg-teal-400:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(45 212 191 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 576px) {
