@@ -56,6 +56,7 @@ resetBtn.addEventListener("click", function(){
     customInput.value = ''
     tipAmount.textContent = "$"
     totalAmount.textContent = "$"
+    btn.classList.remove("show")
 })
 
     

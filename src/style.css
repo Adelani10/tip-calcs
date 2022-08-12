@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .show{
-    background-color: whitesmoke;
+    background-color: gray;
     color: darkgreen;
 }
